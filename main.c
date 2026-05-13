@@ -2,6 +2,9 @@
 #include <string.h>
 
 #include "algorithms.h"
+//command 
+// gcc -Wall -Wextra -std=c11 main.c -o main.exe
+// gcc main.c -o main.exe .\main.exe
 
 // Ham tien ich chay test.
 void run_test(const char *test_name, const char *pattern, const char *text) {
@@ -16,7 +19,7 @@ void run_test(const char *test_name, const char *pattern, const char *text) {
     if (m == 0 || m > n) {
         printf("  -> Khong the match (Edge case)\n");
     } else {
-        int matches = Not_So_Naive(pattern, m, text, n);
+        int matches = Brute_Force(pattern, m, text, n);
         if (matches == 0) {
             printf("  -> Khong tim thay match\n");
         }
